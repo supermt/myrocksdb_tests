@@ -1,0 +1,31 @@
+# How to use MyRocks in existing system
+
+This document is guided by this guideline (https://mariadb.com/kb/en/getting-started-with-myrocks/)
+1. install all dependency by ‘apt’
+
+```
+sudo apt-get install mariadb-plugin-rocksdb
+```
+2. install the plugin (if your server is running)
+
+```
+INSTALL SONAME 'ha_rocksdb';
+```
+3. install the plugin from server options ( need restart the mysql server)
+
+create the following entry in my.cnf or other option files, 
+
+```
+[mariadb]
+plugin_load_add = ha_rocksdb
+```
+
+if you install the plugin from apt, this step can be skipped
+
+4. to verify your installation
+
+connect to the mysql server by 
+
+`sudo mysql -u root`
+
+then use command `SHOW PLUGINS;` to check whether rocksdb is in there or not

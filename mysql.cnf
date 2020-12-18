@@ -1,0 +1,8 @@
+[mysqld]
+
+datadir=../mysql-test/var/install.db
+plugin-dir=../storage/rocksdb
+language=./share/english
+
+plugin-load=ha_rocksdb
+default-storage-engine=rocksdb
