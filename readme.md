@@ -41,3 +41,27 @@ cd ../sql
 # Tese Case
 
 Please read through the markdown file [here](https://github.com/facebook/mysql-5.6/wiki/Data-Loading) to have a better understanding about it.
+
+## `Load data infile` case from MySQL
+
+## `Bulk Loading`, Migration from InnoDB
+
+## `UDB Architecture`, multi client insertion with replica
+
+# Known Shortage of MyRocks
+
+They provide some known issues [here](https://github.com/facebook/mysql-5.6/wiki/MyRocks-limitations)
+
+- Functional defection
+  1. Online DDL is not supported (Not important)
+  2. EXCHANGE PARTITION does not work in MyRocks yet
+  3. Transportable Tablespace, Foreign Key, Spatial Index, and Fulltext Index are not supported
+  4. No gap lock (or range lock)
+- Data format limitation
+  1. binary collation should be on char/varchar indexed column
+- Query performance
+  1. Slow `Order by DESC/ASC` would be slow. 
+
+# Other references
+
+They provides a paper at [VLDB](http://www.vldb.org/pvldb/vol13/p3217-matsunobu.pdf) and a slide [here](https://www.slideshare.net/matsunobu/myrocks-deep-dive/58)
