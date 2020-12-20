@@ -65,3 +65,10 @@ They provide some known issues [here](https://github.com/facebook/mysql-5.6/wiki
 # Other references
 
 They provides a paper at [VLDB](http://www.vldb.org/pvldb/vol13/p3217-matsunobu.pdf) and a slide [here](https://www.slideshare.net/matsunobu/myrocks-deep-dive/58)
+
+# Other datasets
+
+Time series datasets:
+  - [bitcoin heist ransomware address](https://archive.ics.uci.edu/ml/datasets/BitcoinHeistRansomwareAddressDataset)
+LOG dataset projects:
+  - [log hub](https://github.com/logpai/loghub)
